@@ -16,7 +16,7 @@ export default function Results(props) {
       <ul>
         {props.questions.map((question) => {
           return (
-            <li className={styles.answerItem}>
+            <li className={styles.answerItem} key={question.question}>
               {question.wasAnsweredCorrectly ? "+" : "-"}{" "}
               {window.atob(question.question)}
             </li>

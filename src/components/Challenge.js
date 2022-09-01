@@ -11,7 +11,6 @@ export default function Challenge(props) {
   let isTestDone = currentQuestion + 1 === questions.length;
 
   const handleAnswer = (answer) => {
-    console.log(question.correct_answer);
     if (answer === window.atob(question.correct_answer)) {
       setCorrectAnswersTotal((prevState) => prevState + 1);
       question.wasAnsweredCorrectly = true;
